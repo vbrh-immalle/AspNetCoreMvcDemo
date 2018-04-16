@@ -28,10 +28,19 @@ namespace SQLiteAspNetCoreMvcIdentity
         {
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            //services.AddDbContext<ApplicationDbContext>(options =>
+            //    options.UseInMemoryDatabase(Guid.NewGuid().ToString()));
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
+
+            // from https://console.developers.google.com/projectselector/apis/library
+            services.AddAuthentication().AddGoogle(googleOptions =>
+            {
+                googleOptions.ClientId = "TODO";
+                googleOptions.ClientSecret = "TODO";
+            });
 
             // Add application services.
             services.AddTransient<IEmailSender, EmailSender>();
