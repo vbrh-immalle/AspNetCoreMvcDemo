@@ -26,9 +26,6 @@ namespace SQLiteAspNetCoreMvcIdentity.Models
         // b.v. een verbetersleutel
         public string Opmerkingen { get; set; }
 
-        // Alle vragenlijsten waarin deze Vraag voorkomt (meestal slechts 1 voor een test)
-        public virtual ICollection<Vragenlijst> Vragenlijsten { get; set; }
-
         // Alle antwoorden van alle leerlingen die op deze Vraag zijn gegeven (ook van b.v. vorige jaren)
         public virtual ICollection<Antwoord> Antwoorden { get; set; }
     }
