@@ -22,5 +22,13 @@ namespace SQLiteAspNetCoreMvcIdentity.Data
             // For example, you can rename the ASP.NET Identity table names and more.
             // Add your customizations after calling base.OnModelCreating(builder);
         }
+
+        public DbSet<SQLiteAspNetCoreMvcIdentity.Models.Vragenlijst> Vragenlijst { get; set; }
+
+        public DbSet<SQLiteAspNetCoreMvcIdentity.Models.Vraag> Vraag { get; set; }
+
+        public DbSet<SQLiteAspNetCoreMvcIdentity.Models.Antwoord> Antwoord { get; set; }
+
+        public DbSet<SQLiteAspNetCoreMvcIdentity.Models.AntwoordCommentaar> AntwoordCommentaar { get; set; }
     }
 }

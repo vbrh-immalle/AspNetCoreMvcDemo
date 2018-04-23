@@ -1,0 +1,42 @@
+﻿@model SQLiteAspNetCoreMvcIdentity.Models.Antwoord
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Antwoord</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Tekst)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Tekst)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Afbeelding)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Afbeelding)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LaatsteWijziging)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LaatsteWijziging)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Afgesloten)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Afgesloten)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

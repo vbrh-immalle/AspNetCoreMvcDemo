@@ -1,0 +1,48 @@
+﻿@model SQLiteAspNetCoreMvcIdentity.Models.Vraag
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Vraag</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Tekst)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Tekst)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Afbeelding)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Afbeelding)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LaatsteWijziging)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LaatsteWijziging)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MaxPunten)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MaxPunten)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Opmerkingen)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Opmerkingen)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
